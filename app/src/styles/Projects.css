@@ -1,0 +1,92 @@
+.projects {
+  position: relative;
+  height: 70vh !important;
+}
+
+.projects h2 {
+	font-size: 45px;
+	font-weight: 700;
+  text-align: center;
+  color: var(--title-color);
+}
+
+.projects p {
+  color: #B8B8B8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+}
+
+.project-card-container {
+  position: relative;
+  border: 1px solid #242424;
+  overflow: hidden;
+  height: 260px;
+}
+
+.project-card-container::before {
+  content: "";
+  background: var(--bg-hover);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.project-card-container:hover::before {
+  height: 100%;
+}
+
+.project-card-default {
+  height: 260px;
+  text-align: center;
+  background: #1A1A1A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card-container:hover .project-card-default h4 {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card-default h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+
+.project-card-hover {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+
+.project-card-container:hover .project-card-hover {
+  top: 50%;
+  opacity: 1;
+}
+
+.project-card-hover h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+
+.project-card-hover span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
